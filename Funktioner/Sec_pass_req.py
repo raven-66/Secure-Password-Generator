@@ -43,10 +43,12 @@ def password_requirements(password):
 
 meny_namn = ["Kontrollera ditt nuvarande lösenord", "Avsluta"]
 
-print("\n\033[1;36mSECURE PASSWORD CHECKER\033[0m")
+print("\033[═════════════════════════════════════════\033")
+print("\t\033[1;36mSECURE PASSWORD CHECKER\033[0m")
+print("\033[═════════════════════════════════════════\033")
 
 while True:
-    print("\n\033[90m----------\033[1;36m MENY\033[0m\033[90m----------\033[0m")
+    print("\n\033[90m-----------------\033[1;36mMENY\033[0m\033[90m------------------\033[0m")
     for i, namn in enumerate(meny_namn):
         print(f"\033[1;36m{i}: {namn}\033[0m")
 
@@ -54,7 +56,7 @@ while True:
     try:
         meny_val = int(input("\nGör ett av följande val (0-2): "))
     except ValueError:
-        print("\nNu blev det fel. Välj ett av följande alternativ (0-2)")
+        print("\n\033[31mNu blev det tokigt.\033[0m\n\033[1;36mFörsök igen med en siffra mellan (0-3)\033[0m")
         continue
 
     if meny_val == 0:
@@ -64,4 +66,4 @@ while True:
         print("\nAvslutar programmet.")
         break
     else:
-        print("Välj mellan 0-2.")
+        print("\n\033[1;36mVälj ett alternativ mellan 0-2.\033[0m")
