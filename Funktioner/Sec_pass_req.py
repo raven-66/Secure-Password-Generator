@@ -1,5 +1,8 @@
 import string 
 
+from Sec_pass_HIBP import check_hibp 
+
+
 #___Funktioner______________________________________________________________________________________________________
 
 def password_requirements(password):
@@ -41,7 +44,7 @@ def password_requirements(password):
     
 #___Körning av funktioner i loop_____________________________________________________________________________
 
-meny_namn = ["Kontrollera ditt nuvarande lösenord", "Avsluta"]
+meny_namn = ["Kontrollera ditt nuvarande lösenord","Kolla om ditt lösenord är läckt", "Avsluta"]
 
 print("\033[═════════════════════════════════════════\033")
 print("\t\033[1;36mSECURE PASSWORD CHECKER\033[0m")
@@ -63,6 +66,9 @@ while True:
         password = input("\nSkriv lösenordet du vill kontrollera: ")
         password_requirements(password)
     elif meny_val == 1:
+        password = input("\nSkriv lösenordet du vill kontrollera: ")
+        check_hibp(password)
+    elif meny_val == 2:
         print("\nAvslutar programmet.")
         break
     else:
