@@ -1,19 +1,23 @@
 ## Secure Password Checker
 
-Programmet kontrollerar användarens nuvarande lösenordsstyrka, användaren kan även kontrollera om ett lösenord förekommer i kända dataläckor via Have I Been Pwned.
+Programmet kontrollerar användarens nuvarande lösenordsstyrka, användaren kan även kontrollera om ett lösenord förekommer i kända dataläckor via Have I Been Pwned dessutom kan användaren generera ett eget säkert lösenord. 
 
 ### Funktioner
 - Säkerställer lösenord (längd, siffror, specialtecken, o.s.v.)
 - Kontrollerar om lösenordet är läckt (Använder SHA-1 enligt HIBP)
+- Genererar ett säkert lösenord.
 
 ### Säkerhet
-- Inga lösenord skickas i klartext
-- Endast hash-prefix skickas till HIPB
+- Inga lösenord skickas i klartext.
+- Endast hash-prefix skickas till HIPB.
+- Använder modul secrets istället för random pga säkrare vid generering av nytt lösenord.
 
 
 ### Teknik och moduler
 - Python 3
-- requests
-- hashlib
+- Requests
+- Hashlib
+- Secrets
+- String 
 
 ![flowchart](flowchart-1.png)
