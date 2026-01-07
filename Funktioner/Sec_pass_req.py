@@ -2,6 +2,7 @@ import string
 
 from Sec_pass_HIBP import check_hibp 
 
+from Sec_pass_generate import generate_secure
 
 #___Funktioner______________________________________________________________________________________________________
 
@@ -44,7 +45,7 @@ def password_requirements(password):
     
 #___Körning av funktioner i loop_____________________________________________________________________________
 
-meny_namn = ["Kontrollera ditt nuvarande lösenord","Kolla om ditt lösenord är läckt", "Avsluta"]
+meny_namn = ["Kontrollera ditt nuvarande lösenord","Kolla om ditt lösenord är läckt","Generera ett säkert lösenord", "Avsluta"]
 
 print("\033[═════════════════════════════════════════\033")
 print("\t\033[1;36mSECURE PASSWORD CHECKER\033[0m")
@@ -57,7 +58,7 @@ while True:
 
     # Läs menyval och hantera felaktig input
     try:
-        meny_val = int(input("\nGör ett av följande val (0-2): "))
+        meny_val = int(input("\nGör ett av följande val (0-3): "))
     except ValueError:
         print("\n\033[31mNu blev det tokigt.\033[0m\n\033[1;36mFörsök igen med en siffra mellan (0-3)\033[0m")
         continue
@@ -69,7 +70,10 @@ while True:
         password = input("\nSkriv lösenordet du vill kontrollera: ")
         check_hibp(password)
     elif meny_val == 2:
+        safe_pass = generate_secure()
+        print(f"\n\033[1;36mHär är ditt nya säkra lösenord:\033[0m\n{safe_pass}")
+    elif meny_val == 3:
         print("\nAvslutar programmet.")
         break
     else:
-        print("\n\033[1;36mVälj ett alternativ mellan 0-2.\033[0m")
+        print("\n\033[1;36mVälj ett alternativ mellan 0-3.\033[0m")
