@@ -16,3 +16,4 @@ Programmet kontrollerar användarens nuvarande lösenordsstyrka, användaren kan
 - requests
 - hashlib
 
+![flowchart](flowchart-1.png)
