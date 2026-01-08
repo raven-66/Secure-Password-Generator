@@ -62,7 +62,7 @@ while True:
     except ValueError:
         print("\n\033[31mNu blev det tokigt.\033[0m\n\033[1;36mFörsök igen med en siffra mellan (0-3)\033[0m")
         continue
-
+# "Print att användaren ska skriva ner lösenordet" 
     if meny_val == 0:
         password = input("\nSkriv lösenordet du vill kontrollera: ")
         password_requirements(password)
