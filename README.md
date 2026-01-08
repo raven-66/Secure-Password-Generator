@@ -25,3 +25,4 @@ Programmet kontrollerar användarens nuvarande lösenordsstyrka, användaren kan
 ### Test av programmet
 
 ![Run](Funktioner/test_sec_pass_req.gif)
+![test_sec_pass_req](https://github.com/user-attachments/assets/8b00e67c-6d70-4826-9a5f-d66d45b5b01a)
