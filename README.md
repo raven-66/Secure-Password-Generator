@@ -24,4 +24,4 @@ Programmet kontrollerar användarens nuvarande lösenordsstyrka, användaren kan
 
 ### Test av programmet
 
-<video controls src="Funktioner/test_sec_pass_req.mp4" title="Title"></video>
+![Run](Funktioner/test_sec_pass_req.gif)
