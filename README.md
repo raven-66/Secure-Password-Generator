@@ -21,3 +21,7 @@ Programmet kontrollerar användarens nuvarande lösenordsstyrka, användaren kan
 - String 
 
 ![flowchart](flowchart-1.png)
+
+### Test av programmet
+
+<video controls src="Funktioner/test_sec_pass_req.mp4" title="Title"></video>
