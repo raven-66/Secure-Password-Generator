@@ -64,14 +64,14 @@ while True:
         continue
 # "Print att användaren ska skriva ner lösenordet" 
     if meny_val == 0:
-        password = input("\nSkriv lösenordet du vill kontrollera: ")
+        password = input("\n\033[1;36mDet du skriver kommer synas i klartext.\nSkriv lösenordet du vill kontrollera: \033[0m")
         password_requirements(password)
     elif meny_val == 1:
-        password = input("\nSkriv lösenordet du vill kontrollera: ")
+        password = input("\n\033[1;36mDet du skriver kommer synas i klartext.\nSkriv lösenordet du vill kontrollera: \033[0m")
         check_hibp(password)
     elif meny_val == 2:
         safe_pass = generate_secure()
-        print(f"\n\033[1;36mHär är ditt nya säkra lösenord:\033[0m\n{safe_pass}")
+        print(f"\n\033[1;36mHär är ditt nya säkra lösenord:\033[0m\n{safe_pass}\n\033[1;36mSKRIV NER OCH SPARA\033[0m")
     elif meny_val == 3:
         print("\nAvslutar programmet.")
         break
